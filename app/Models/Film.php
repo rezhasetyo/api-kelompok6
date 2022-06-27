@@ -9,4 +9,5 @@ class Film extends Model
 {
     use HasFactory;
     protected $table    = 'film';
+    protected $fillable = ['judul', 'sutradara', 'sinopsis', 'tahun', 'rating', 'genre_id'];
 }

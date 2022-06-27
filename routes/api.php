@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::apiResource('/film', App\Http\Controllers\Api\FilmController::class);
+Route::apiResource('/genre', App\Http\Controllers\Api\GenreController::class)->only([ 'index', 'show']);
+
