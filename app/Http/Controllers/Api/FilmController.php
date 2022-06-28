@@ -24,6 +24,7 @@ class FilmController extends Controller
                 'sinopsis'   => 'required',
                 'tahun'   => 'required|numeric',
                 'rating'   => 'required|numeric',
+                'harga'   => 'required|numeric',
                 'genre_id'   => 'required',
             ]);
 
@@ -38,9 +39,11 @@ class FilmController extends Controller
                 'tahun'   => $request->tahun,
                 'rating'   => $request->rating,
                 'genre_id'   => $request->genre_id,
+                'harga'   => $request->harga,
+                
             ]);
 
-            return new FilmResource(true, 'Data Post Berhasil Ditambahkan!', $films);
+            return new FilmResource(true, 'Data Film Berhasil Ditambahkan!', $films);
         }
 
         public function show(Film $film)    {
@@ -55,6 +58,7 @@ class FilmController extends Controller
                 'sinopsis'   => 'required',
                 'tahun'   => 'required|numeric',
                 'rating'   => 'required|numeric',
+                'harga'   => 'required|numeric',
                 'genre_id'   => 'required',
             ]);
     
@@ -68,6 +72,7 @@ class FilmController extends Controller
                 'sinopsis'   => $request->sinopsis,
                 'tahun'   => $request->tahun,
                 'rating'   => $request->rating,
+                'harga'   => $request->harga,
                 'genre_id'   => $request->genre_id,
             ]);
 
