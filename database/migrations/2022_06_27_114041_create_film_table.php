@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('sutradara');
             $table->text('sinopsis');
             $table->integer('tahun');
-            $table->float('rating');            
+            $table->float('rating');
+            $table->integer('harga');
             $table->unsignedBigInteger('genre_id');     
             $table->foreign('genre_id')->references('id')->on('genre');
             $table->timestamps();
