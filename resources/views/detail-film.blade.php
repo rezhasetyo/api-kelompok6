@@ -38,7 +38,7 @@
 
                                 <div class="form-group">
                                     <label>Rating Film</label>
-                                    <input class="form-control" value="{{ $data->rating }}" disabled>
+                                    <input class="form-control" value="{{ $data->genre->nama_genre }}" disabled>
                                 </div> <br>
 
                                 <div class="form-group">
@@ -48,7 +48,7 @@
 
                                 <div class="form-group">
                                     <label>Harga</label>
-                                    <input class="form-control" value="{{ $data->harga }}" disabled>
+                                    <input class="form-control" value="@currency($data->harga)" disabled>
                                 </div> <br>
 
                                 <div class="form-group">

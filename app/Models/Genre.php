@@ -9,4 +9,8 @@ class Genre extends Model
 {
     use HasFactory;
     protected $table    = 'genre';
+
+    public function film()  {
+        return $this->hasMany(Film::class);
+    }
 }
