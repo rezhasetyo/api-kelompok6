@@ -3,7 +3,7 @@
 <ul class="sidebar-nav" id="sidebar-nav">
 
     <li class="nav-item">
-        <a class="nav-link " href="/film">
+        <a class="nav-link " href="/">
             <i class="bi bi-layout-text-window-reverse"></i>
             <span>Tabel Film</span>
         </a>

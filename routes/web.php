@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FilmController;
+use App\Http\Controllers\GenreController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {   return view('film'); });
+// Route::get('/genre', function () {   return view('genre'); });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/', [FilmController::class, 'index']);
+Route::resource('/film', FilmController::class);
+Route::resource('/genre', GenreController::class);
