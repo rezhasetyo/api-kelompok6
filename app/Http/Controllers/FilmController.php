@@ -12,4 +12,9 @@ class FilmController extends Controller
         $data = Film::all();
         return view('film', compact('data'));
     }
+
+    public function show($id)   {
+        $data = Film::find($id);
+        return view('detail-film', compact('data'));
+    }
 }

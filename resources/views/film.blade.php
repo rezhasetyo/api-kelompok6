@@ -35,7 +35,7 @@
                           <td>{{ Str::limit($value->sinopsis, 250) }}</td>
                           <td>
                             <!-- <a href="#" class="btn btn-sm btn-info mb-2">Edit</a> -->
-                            <a href="#" class="btn btn-sm btn-success mb-2">Detail</a>
+                            <a href="/film/{{ $value->id }}" class="btn btn-sm btn-success mb-2">Detail</a>
                             <!-- <form action="#" class="d-inline" onsubmit="return confirm('Yakin hapus data?') ">
                                 <button class="btn btn-sm btn-danger">
                                     Hapus

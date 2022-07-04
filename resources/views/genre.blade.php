@@ -5,7 +5,7 @@
   <h1>Tabel Film</h1>
   <nav>
     <ol class="breadcrumb h2">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/">Tabel</a></li>
       <li class="breadcrumb-item active">Tabel Genre</li>
     </ol>
   </nav>
@@ -32,8 +32,9 @@
                           <td>{{ $value->id }}</td>
                           <td>{{ $value->nama_genre }}</td>
                           <td>
+                            <a href="#" class="btn btn-sm btn-info">Daftar Film</a>
                             <!-- <a href="#" class="btn btn-sm btn-info">Edit</a> -->
-                            <a href="#" class="btn btn-sm btn-success">Detail</a>
+                            <!-- <a href="#" class="btn btn-sm btn-success">Detail</a> -->
                             <!-- <form action="#" class="d-inline" onsubmit="return confirm('Yakin hapus data?') ">
                                 <button class="btn btn-sm btn-danger">
                                     Hapus

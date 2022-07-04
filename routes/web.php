@@ -20,5 +20,5 @@ use App\Http\Controllers\GenreController;
 // Route::get('/genre', function () {   return view('genre'); });
 
 Route::get('/', [FilmController::class, 'index']);
-Route::resource('/film', FilmController::class);
-Route::resource('/genre', GenreController::class);
+Route::resource('/film', FilmController::class)->only('index', 'show');
+Route::resource('/genre', GenreController::class)->only('index');
