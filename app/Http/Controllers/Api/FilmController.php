@@ -50,7 +50,7 @@ class FilmController extends Controller
             return new FilmResource(true, 'Data Film Ditemukan!', $film);
         }
 
-        public function update(Request $request, Film $films)
+        public function update(Request $request, $id)
         {
             $validator = Validator::make($request->all(), [
                 'judul'     => 'required',
@@ -66,15 +66,15 @@ class FilmController extends Controller
                 return response()->json($validator->errors(), 422);
             }
 
-            $films = Film::create([
-                'judul'     => $request->judul,
-                'sutradara'   => $request->sutradara,
-                'sinopsis'   => $request->sinopsis,
-                'tahun'   => $request->tahun,
-                'rating'   => $request->rating,
-                'harga'   => $request->harga,
-                'genre_id'   => $request->genre_id,
-            ]);
+            $films = Film::find($id);
+            $films->judul = $request->judul;
+            $films->sutradara = $request->sutradara;
+            $films->sinopsis = $request->sinopsis;
+            $films->tahun = $request->tahun;
+            $films->rating = $request->rating;
+            $films->harga = $request->harga;
+            $films->genre_id = $request->genre_id;
+            $films->save();
 
             return new FilmResource(true, 'Data Film Berhasil Diubah!', $films);
         }

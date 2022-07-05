@@ -52,7 +52,7 @@
                                 </div> <br>
 
                                 <div class="form-group">
-                                    <label>Sinopsis</label>
+                                    <label><b>Sinopsis</b></label>
                                     <!-- <textarea class="form-control" disabled>{{ $data->sinopsis }}</textarea> -->
                                     <p>{{ $data->sinopsis }}</p>
                                 </div> <br>
